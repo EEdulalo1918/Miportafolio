@@ -485,7 +485,7 @@ PROYECTOS
 
 /*Al pasar el mouse sobre la tarjeta se aparece el overlay*/
 
-.project-card:hover ,.project-card_overlay{
+.project-card:hover .project-card_overlay{
     opacity: 1;}
 
 /*cuerpo de la targeta*/
@@ -495,7 +495,7 @@ PROYECTOS
 .project-card_tags{
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: .4rem;
     margin-bottom: 1rem;
 }
 
