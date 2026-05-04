@@ -1,0 +1,525 @@
+/*------------------
+Variables - colores y fuentes
+------------------*/
+
+:root{
+    --bg: #0a0a0f;        /*color para el dondo*/
+    --surface: #16161f;   /*color de las tarjetas */
+    --border: rgba(255,255,255,0.07); /*bordes sutiles*/
+    --accent: #6ee7b7;    /*color principal, es el verde menta*/
+    --text: #e8e8f0;      /*color del texto*/
+    --text-muted: #7a7a9a; /*para texto secundario, color gris*/
+}
+
+/* RESET, borramos estilos del navegador*/
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*para no agrandar los elementos*/
+}
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    line-height: 1.7;
+}
+
+a{ text-decoration: none; color:inherit;}
+
+/*-----------------
+BARRA DE NAVEGACION
+-----------------*/
+
+nav{
+    position: fixed;                   /*simepre visible al hacer scroll*/
+    top: 0; left: 0; right: 0;         /*pagada arriba de todo*/
+    z-index: 100;                      /*enciam de lo demas*/
+    display: flex;                     /*acomoda en fila a los hijos*/
+    align-items: center;               /*centra verticalmente*/
+    gap: 2rem;                         /*espacio entre elementos*/
+    padding: 1.25rem 3rem;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(20px);       /*efecto de vidrio*/
+    border-bottom: 1px solid var(--border);
+}
+
+.nav_logo{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-right: auto;   /*empuja todo lo demas a la derecha*/
+}
+
+.nav_logo span{color: var(--accent);}  /*le damos color la punto(verde)*/
+
+.nav_links{
+    display: flex; /*añlinea elemtos hijos directos uno a lado del otro*/
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav_links a{
+    font-size: .9rem;
+    color: var(--text-muted);
+    transition: color .3s;
+}
+
+.nav_links a:hover {color: var(--accent);} /*al pasar le mouse*/
+
+/*---------------------
+BOTONES
+----------------------*/
+.btn{
+    display: inline-flex;
+    align-items: center;
+    padding: .75rem 1.75rem;
+    border-radius: 50px;
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all .3s;
+}
+
+.btn--outline{
+    background: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+}
+
+.btn--outline:hover{
+    background: var(--accent);
+    color: #0a0a0f;
+}
+
+.hero{
+    min-width: 100vh;/*asi ocupa toda la pantalla*/
+    display: flex;/* foto y texto en la fila */
+    align-items: center; /*centramos verticalmente*/
+    gap: 4rem;
+    padding: 8rem 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;  /*centra el contenido*/
+    position: relative;
+}
+
+/* Fondo con blobs*/
+
+.hero_bg{
+    position: fixed;
+    inset: 0;
+    z-index: -10;   /*detras de todo*/
+    overflow: hidden;
+}
+
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);  /*difuminado*/
+    opacity: .15;
+}
+
+.blob--1{
+    width: 600px; height: 600px;
+    background: var(--accent);
+    top: -100px; left: -100px; 
+    /*animacion suave*/
+    animation: moverBlob1 12s ease-in-out infinite;
+}
+
+.blob--2{
+    width: 500px; height: 500px;
+    background: #a78bfa;
+    top: -100px; left: -100px; 
+    /*animacion suave*/
+    animation: moverBlob2 15s ease-in-out infinite;
+}
+
+/*definimos como se movera la animacion con los keyframes*/
+
+@keyframes moverBlob1{
+    0%, 100% {transform: translate(0,0);}
+    50% {transform: translate(60px, 80px);}
+}
+
+@keyframes moverBlob2{
+    0%, 100% {transform: translate(0,0);}
+    50% {transform: translate(-60px, -40px);}
+}
+
+/*Contenido izquierdo*/
+.hero_content{flex:1;} /*ocupa todo el espacio disponible*/
+
+.hero_tag{
+    display: inline-block;
+    padding: .4rem 1rem;
+    border-radius: 50px;
+    background: rgba(110,231,183,0.1);
+    border: 1px solid rgba(110,231,183,0.2);
+    color: var(--accent);
+    font-size: .85rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero_title{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+}
+
+/*Texto con gradiente de color*/
+.highlight{
+    background: linear-gradient(135deg,#6ee7b7, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero_sub{
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+
+}
+
+.hero_sub strong {color: var(--text);}
+
+.hero_cta{
+    display: flex;
+    gap:1rem;
+    margin-bottom: 3rem;
+}
+
+/*Botones*/
+.btn--primary{
+    background: var(--accent);
+    color: #0a0a0f;;
+    box-shadow:  0 0 30px rgba(110, 231,183,0.3);
+}
+
+.btn--primary:hover{
+    transform: translateY(-2px);  /*sube un poco al pasar el mouse*/
+    box-shadow:  0 0 50px rgba(110,231,183,0.5);
+}
+
+.btn--ghost{
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid var(--border);
+}
+
+.btn--ghost:hover{
+    border-radius: var(--accent);
+    color: var(--accent);
+}
+
+/*Estadisticas*/
+
+.hero_stats{display: flex; gap: 2.5rem;}
+
+.stat_num{
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.stat_label{
+    font-size: .8rem;
+    color: var(--text-muted);
+}
+
+/*foto*/
+.hero_photo-wrap{
+    position: relative;
+    width: 300px; height: 300px;
+    flex-shrink: 0; /*que no se encoja*/
+}
+
+/*anillo girando alrededor de la foto*/
+.hero_photo-ring{
+    position:absolute;
+    inset: -12px;
+    border-radius: 50%;
+    border: 2px dashed rgba(110, 231,183,0.3);
+    animation: girar 20s linear infinite;
+}
+
+@keyframes girar {
+    to{transform: rotate(360deg);}
+}
+
+.hero_photo{
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /*recorta sin deformar */
+    border: 3px solid var(--accent);
+    position: relative;
+    z-index: 1;
+}
+
+/*------------------
+Seccion de estilos para el "sobre mi" y el de "habilidades "
+------------------*/
+
+.section{ padding:7rem 0;}
+
+/*container para limitar el ancho y centrar*/
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section_header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section_tag{
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .75rem;
+}
+
+.section_title{
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+/*------------------
+SOBRE MI
+------------------*/
+
+.sobre{background: #111118;}
+
+/* usamos grid para dividir en 2 coumnas iguales*/
+.sobre_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1fr =  a una fracion del espacio*/
+    gap: 4rem;
+    align-items: start;
+}
+
+.sobre_text p{
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+.sobre_text strong {color:var(--text);}
+
+.sobre_badges{
+    display: flex;
+    flex-wrap: wrap; /*si no caben lo baja a la siguiente linea*/
+    gap: .6rem;
+    margin-top: 1.5rem;
+}
+
+.badge{
+    padding: .4rem .9rem;
+    border-radius: 50px;
+    background: var(--surface);
+    border:  1px solid var(--border);
+    font-size: .82rem;
+    color: var(--text-muted);
+}
+
+/*tarjeta con la infromacion personal*/
+
+.info-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;  /*apila los items verticalmente*/
+    gap: 1.5rem;
+
+}
+
+.info-item{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.info-item-icon{font-size: 1.4rem;}
+
+.info-item strong {
+    display: block;
+    font-size: .85rem;
+    margin-bottom: .15rem;
+}
+
+.info-item p {
+    color: var(--text-muted);
+    font-size: .9rem;
+}
+
+/*HABILIDADES-----------------------------------------------------*/
+/*son 3 columnas iguales*/
+
+.skills_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.skill-group{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding:  2rem;
+    transition: all .3s;
+}
+
+/*efecto de al pasar el mouse sube y brilla*/
+
+.skill-group:hover{
+    border-color: rgba(110, 231,183,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.3);
+}
+
+.skill-group_title{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.skill-list{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+.skill-item{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .6rem .8rem;
+    border-radius: 8px;
+    background: #1e1e2a;
+    font-size: .9rem;
+    color: var(--text-muted);
+    transition: color .3s;
+}
+
+.skill-item:hover { color: var(--text); }
+
+
+
+
+/*-------------------------
+PROYECTOS
+-------------------------*/
+
+.proyectos { background: #111118;}
+
+/* las dos columnos para las targetas */
+.projects_grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.project-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all .35s;
+}
+
+.project-card:hover{
+    transform: translateY(-6px);
+    border-color: rgba(110, 231,183,0.3);
+    box-shadow: 0 30px 60px rgba(0,0,0,.4);
+}
+
+/* contendor de la imagen */
+
+.project-card_img-wrap{
+    position: relative;
+    height:220px;
+    overflow: hidden;
+    background: #1e1e2a; /*solo por si no hay imagen*/
+
+}
+
+.project-card_img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.project-card:hover .project-card_img-wrap img {
+    transform: scale(1.05);
+}
+
+/* agregamos una caja oscura la pasar le mouse */
+.project-card_overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(10,10,15,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.35s;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/*Al pasar el mouse sobre la tarjeta se aparece el overlay*/
+
+.project-card:hover ,.project-card_overlay{
+    opacity: 1;}
+
+/*cuerpo de la targeta*/
+    .project-card_body{padding: 1.75rem;}
+
+/*Tags de tecnologias*/
+.project-card_tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    padding: .25rem .75rem;
+    border-radius: 50px;
+    background: rgba(110,231,183,0.1);
+    border: 1px solid rgba(110,231,183,0.2);
+    color: var(--accent);
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.project-card_title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: .75rem;
+}   
+
+.project-card_desc {
+    color: var(--text-muted);
+    font-size: .9rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.project-card_links { display: flex; gap: .75rem; }

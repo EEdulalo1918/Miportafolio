@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Escamilla  - Desarrollador Frontend </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Barra de navegacion-->
+    <nav class="nav" id="nav">
+
+        <!-- logo con iniciales -->
+        <div class="nav_logo">EEP<span>.</span></div>
+
+        <!-- links de la barra de navegacion -->
+        <ul class="nav_links">
+            <li><a href="#sobre-mi">Sobre mi</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <!-- Boton para descragar cv -->
+        <a href="cv.pdf" download class="btn bnt--outline">Descargar Cv</a>
+
+    </nav>
+
+    <!--Presentacion-->
+    <section class ="hero" id="inicio">
+        <!-- Fondo decorativo -->
+        <div class="hero_bg">
+            <div class="blob blob--1"></div>
+            <div class="blob blob--2"></div>
+        </div>
+
+        <!-- contenido lado izquierdo -->
+        <div class="hero_content">
+            <span class="hero_tag"> Disponible para trabajar</span>
+
+            <!-- Nombre -->
+            <h1 class="hero_title">
+                Hola, soy<br>
+                <span class="highlight">Eduardo Escamilla</span>
+            </h1>
+
+            <!-- Descripccion -->
+            <p class="hero_sub">
+                Desarrollador <strong>Frontend</strong> — Creo interfaces que combinan
+                diseño limpio con código eficiente. Apasionado por transformar ideas
+                en experiencias digitales memorables.
+            </p>
+
+            <!-- Botones  -->
+            <div class="hero_cta">
+                <a href="#proyectos" class="btn btn--primary">Ver mis proyectos</a>
+                <a href="#contacto" class="btn btn--ghost">Contactame</a>
+            </div>
+
+            <!-- Numeros estaticos -->
+            <div class="hero_stats">
+                <div class="stat">
+                    <span class="stat_num">2</span>
+                    <span class="stat_label">Proyectos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_num">5+</span>
+                    <span class="stat_label">Tecnologias</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_num">100%</span>
+                    <span class="stat_label">Dedicación</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- seccion de la foto -->
+        <div class="hero_image">
+            <div class="hero_photo-wrap">
+                <div class="hero_photo-ring"></div>
+                <img src="/assets/img/foto.jpeg" alt="Eduardo Escamilla Peréz" class="hero_photo">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Sobre mi -->
+    <section class="section sobre" id="sobre-mi">
+        <div class="container">
+
+            <!--encabezado de la seccion  -->
+            <div class=" section_header">
+                <span class="section_tag">01 - Sobre mí</span>
+                <h2 class="section_title">¿Quién soy?</h2>
+            </div>
+
+            <!-- columas de texto e info -->
+            <div class="sobre_grid">
+
+                <!-- columa izquierda texto -->
+                <div class="sobre_text">
+                    <p>Soy <strong>desarrollador Frontend</strong> recién egresado,
+                    con sólida formación en la creación de interfaces web modernas,
+                    funcionales y responsivas.</p>
+
+                    <p>Me especializo en escribir código limpio y estructurado.
+                    También cuento con conocimientos en backend con <strong>PHP y MySQL</strong>, lo que me permite trabajar en proyectos completos.</p>
+                    
+                    <p>Estoy buscando mi primera oportunidad profesional donde pueda
+                    aportar desde el primer día, seguir creciendo y aprendiendo.</p>
+
+                    <!-- Habilidades blandas -->
+                    <div class="sobre_badges">
+                        <span class="badge">Aprendizaje continuo</span>
+                        <span class="badge">Trabajo en equipo</span>
+                        <span class="badge">Orientado a resulltados</span>
+                        <span class="badge">Resolución de problemas</span>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: targeta de informacion -->
+                <div class="sobre_info">
+                    <div class="info-card">
+
+                        <div class="info-item">
+                            <span class="info-item_icon">🎓</span>
+                                <div>
+                                    <strong>Carrera</strong>
+                                    <p>Ciencias Computacionales</p>
+                                </div>                 
+                        </div>
+
+                <div class="info-item">
+                    <span class="info-item_icon">📍</span>
+                        <div>
+                            <strong>Ubicación</strong>
+                            <p>Pachuca,Hidalgo</p>
+                        </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-item_icon">💼</span>
+                    <div>
+                        <strong>Disponibilidad</strong>
+                        <p>Inmediata - Timepo completo</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-item_icon">🌐</span>
+                    <div>
+                        <strong>Idiomas</strong>
+                        <p>Español nativo · Ingles basico - en camino a intermedio</p>
+                    </div>             
+                </div>
+            </div>             
+        </div>
+    
+    </section>
+
+    <!-- Habilidade -->
+    <section  class="section skills" id="habilidades">
+        <div class="container">
+
+            <div class="section_header">
+                <span class=" section_tag">02 - Habilidades</span>
+                <h2 class="section_title">Stack Tecnolgicos</h2>
+            </div>
+
+            <!-- columnas de habilidades 3  -->
+            <div class="skills_grid">
+
+                <div class="skill-group">
+                    <h3 class="skill-group_title">Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item"><span>🌐</span><span>HTML5</span></div>
+                        <div class="skill-item"><span>🎨</span><span>CSS3</span></div>
+                        <div class="skill-item"><span>⚡</span><span>JavaScritp</span></div>
+                        <div class="skill-item"><span>📱</span><span>Responsive Design</span></div>
+                        <div class="skill-item"><span>🔲</span><span>Flexbox & Grid</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3 class="skill-group_title">Backend & BD</h3>
+                    <div class="skill-list">
+                        <div class="skill-item"><span>🐘</span><span>PHP</span></div>
+                        <div class="skill-item"><span>🗄️</span><span>MySQL</span></div>
+                        <div class="skill-item"><span>🔗</span><span>PDO</span></div>
+                        <div class="skill-item"><span>🔄</span><span>AJAX</span></div>
+                        <div class="skill-item"><span>🏗️</span><span>MVC</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3 class="skill-group_title">Herramientas</h3>
+                    <div class="skill-list">
+                        <div class="skill-item"><span>🐙</span><span>Git & GitHub</span></div>
+                        <div class="skill-item"><span>🛠️</span><span>VS Code</span></div>
+                        <div class="skill-item"><span>📦</span><span>XAMPP</span></div>
+                        <div class="skill-item"><span>🗃️</span><span>phpMyAdmin</span></div>
+                    </div>
+                </div>      
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Proyectos -->
+    <section class="section proyectos"  id="proyectos">
+        <div class="container">
+
+            <div class="section_header">
+                <span class="section_tag">03 - proyectos </span>
+                <h2 class="section_title">Lo que he cosntruido</h2>
+            </div>
+
+            <div class="projects_grid">
+
+                <!-- Tarejeta 1 paar el proyecto CRUD -->
+                <div class="project-card">
+
+                    <!-- imagen -->
+                    <div class="project-card_img-wrap">
+                        <img src="/assets/img/CRUD.png" alt="CRUD Panel">
+                        <div class="project-card_overlay">
+                            <span>Ver proyecto</span>
+                        </div>
+                    </div>
+
+                    <!-- Contenido de la targeta -->
+                    <div class="project-card_body">
+
+                        <!-- Tecnologias usadas  -->
+                        <div class="project-card_tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">AJAX</span>
+                            <span class="tag">MVC</span>
+
+                        </div>
+
+                        <h3 class="project-card_title">CRUD - Panel de administración</h3>
+                        <p class="project-card_desc">
+                            Sistema web de administración con módulos de noticias, eventos,
+                            beneficios y más. Desarrollado con arquitectura MVC y
+                            peticiones asíncronas con AJAX.
+                        </p>
+
+                        <!-- botones -->
+
+                        <div class="project-card_links">
+                            <a href="https://github.com/EEdulalo1918/crud-casos-de-exito" target="_blank" class="btn btn-sm btn-outline">GitHub
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- tarjeta 2 cedai -->
+                <div class="project-card">
+
+                    <div class="project-card_img-wrap">
+                        <img src="/assets/img/CEDAI.png" alt="CEDAI panel">
+                        <div class="project-card_overlay">
+                            <span>Ver proyectos</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card_body">
+
+                        <div class="project-card_tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">PDO</span>
+                        </div>
+
+                        <H3 class="project-card_title">CEDAI - Sistema institucinal</H3>
+
+                        <p class="project-card__desc">
+                            Plataforma de administración institucional con módulos de
+                            servicios, galería y avisos. Incluye autenticación de usuarios
+                            y gestión de imágenes con arquitectura MVC.
+                        </p>
+
+                        <div class="project-card_links">
+                            <a href="https://github.com/EEdulalo1918/cedai-management-system" target="_blank" class="btn btn-sm btn-outline">GitHub
+
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de pagina - footer -->
+    <footer> Footer aqui</footer>
+
+    <!-- conectar con JS -->
+    <script src=""></script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
