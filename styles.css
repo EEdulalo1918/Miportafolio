@@ -645,8 +645,73 @@ seccion del Contacto
     opacity: .6;
 }
 
+/* =================
+animacion de entrada al scroll
+========================= */
 
+/* estado inicial visible y abajo */
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .7s ease, transform .7s ease;
+}
 
+/*estado final, visible y en su lugar*/
+.reveal.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
 
+/* barra de naviegacion al hacer scroll */
+.nav.scrolled{
+    padding: .9rem 3rem; /* se hace mas pequeña*/
+    box-shadow: 0 4px 30px rgba(0,0,0,.3);
+}
 
+/*--------------------------*/
+/* RESPONSIVE - Movil */
+/*--------------------------*/
+
+.nav_hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav_hamburger span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all .3s;
+}
+
+/*para pantallas pequeñas*/
+
+.hero{
+    flex-direction: column;
+    text-align: center;
+    padding: 7rem 2rem 4rem;
+}
+
+.hero_image{ order: -1;}
+.hero_photo-wrap{width: 200px; height: 200px;}
+
+/*grids pasan a una columna*/
+
+.sobre_grid,
+.contact_grid  {grid-template-columns: 1fr;}
+.skills_grid   { grid-template-columns: 1fr;}
+.projects_grid { grid-template-columns: 1fr;}
+
+/* nav en movil */
+
+.nav {padding: 1rem 1.5rem;}
+.nav_links {display: none;} /*ocultamos links*/
+.nav_hamburger {display: flex;} /*muestra el boton*/
