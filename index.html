@@ -359,12 +359,13 @@
                 <!-- columna del formulario -->
                 <form class="contact_form reveal" id="contactForm"
 
-                    action="https://formspree.io/f/mbdwkqza"
-                    method="POST">
+                    action = "https://formspree.io/f/mbdwkqza"
+                    method = "POST">
 
                     <div class="form-group">
                         <input 
                         type="text"
+                        name="name"
                         placeholder="Tu nombre"
                         required
                         class="form-input">
@@ -373,6 +374,7 @@
                     <div class="form-group">
                         <input 
                         type="email"
+                        name="email"
                         placeholder="Tu correo"
                         required
                         class="form-input">
@@ -381,6 +383,7 @@
                     <div class="form-group">
                         <textarea 
                         placeholder="Deja un mensaje"
+                        name="message"
                         rows="4"
                         required
                         class="form-input">
