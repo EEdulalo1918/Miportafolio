@@ -21,7 +21,7 @@ Variables - colores y fuentes
 body{
     background: var(--bg);
     color: var(--text);
-    font-family: sans-serif;
+    font-family: Syne, sans-serif;
     line-height: 1.7;
 }
 
@@ -693,6 +693,7 @@ animacion de entrada al scroll
 }
 
 /*para pantallas pequeñas*/
+@media (max-width: 900px) {
 
 .hero{
     flex-direction: column;
@@ -700,6 +701,12 @@ animacion de entrada al scroll
     padding: 7rem 2rem 4rem;
 }
 
+.hero_sub  { margin: 0 auto 2.5rem; }
+.hero_cta  { justify-content: center; }
+.hero_stats { justify-content: center; }
+
+
+/*la foto sube arriba*/
 .hero_image{ order: -1;}
 .hero_photo-wrap{width: 200px; height: 200px;}
 
@@ -715,3 +722,4 @@ animacion de entrada al scroll
 .nav {padding: 1rem 1.5rem;}
 .nav_links {display: none;} /*ocultamos links*/
 .nav_hamburger {display: flex;} /*muestra el boton*/
+}
