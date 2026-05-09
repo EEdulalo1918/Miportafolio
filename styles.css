@@ -21,7 +21,7 @@ Variables - colores y fuentes
 body{
     background: var(--bg);
     color: var(--text);
-    font-family: Syne, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.7;
 }
 
@@ -93,7 +93,7 @@ BOTONES
 }
 
 .hero{
-    min-width: 100vh;/*asi ocupa toda la pantalla*/
+    min-width: 100%;/*asi ocupa toda la pantalla*/
     display: flex;/* foto y texto en la fila */
     align-items: center; /*centramos verticalmente*/
     gap: 4rem;
@@ -108,7 +108,7 @@ BOTONES
 .hero_bg{
     position: fixed;
     inset: 0;
-    z-index: -10;   /*detras de todo*/
+    z-index: -1;   /*detras de todo*/
     overflow: hidden;
 }
 
@@ -723,3 +723,4 @@ animacion de entrada al scroll
 .nav_links {display: none;} /*ocultamos links*/
 .nav_hamburger {display: flex;} /*muestra el boton*/
 }
+
