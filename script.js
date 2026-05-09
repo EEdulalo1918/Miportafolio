@@ -162,3 +162,20 @@ form.addEventListener('submit', async (e) => {
 
 })
 
+//validar entrada de datos
+
+form.addEventListener("submit", (e) => {
+    const nombre = form.nombre.value.trim();
+    const mensaje = form.mensaje.value.trim();
+
+    if(nombre.length < 5){
+        alert("Nombre invalido");
+        e.preventDefault();
+        return
+    }
+
+    if(mensaje.length < 10){
+        alert("Mensaje demasiado corto")
+        e.preventDefault();
+    }
+});

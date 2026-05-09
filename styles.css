@@ -212,7 +212,7 @@ BOTONES
 }
 
 .btn--ghost:hover{
-    border-radius: var(--accentt);
+    border-radius: var(--accent);
     color: var(--accent);
 }
 
