@@ -14,26 +14,24 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// menu hamburguesa
+// MENÚ HAMBURGUESA con efecto fade
 const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav_links');
 
-hamburger.addEventListener('click', () =>{
-    const links = document.querySelector('.nav_links');
+hamburger.addEventListener('click', () => {
 
-    //si esta ocualto lo mostramos, si esta visible lo oculatamos
-    if(links.style.display ==  'flex'){
-        links.style.display = 'none';
-    } else {
-        links.style.display = 'flex';
-        links.style.flexDirection  = 'column';
-        links.style.position = 'absolute';
-        links.style.top = '70px';
-        links.style.left = '0';
-        links.style.right = '0';
-        links.style.background = 'rgba(10,10,15,0.97)';
-        links.style.padding    = '1.5rem 2rem';
-        links.style.borderBottom = '1px solid rgba(255,255,255,0.07)';
-    }
+  // Alterna la clase 'abierto' en ambos elementos
+    hamburger.classList.toggle('abierto');
+    navLinks.classList.toggle('abierto');
+
+});
+
+// Cierra el menú al hacer clic en un link
+document.querySelectorAll('.nav_links a').forEach(link => {
+    link.addEventListener('click', () => {
+    hamburger.classList.remove('abierto');
+    navLinks.classList.remove('abierto');
+    });
 });
 
 //ANIMACION AL HACER SCROLL
