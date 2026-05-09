@@ -610,6 +610,13 @@ seccion del Contacto
 
 
 /* Al hacer clic en el input se ilumina el borde */
+textarea{
+    padding-top: 0;
+    padding-left: 0;
+    text-align: left; /* Asegura alineación a la izquierda */
+    vertical-align: top; /* Alinea texto arriba */
+}
+
 
 .form-input:focus{
     outline: none;
